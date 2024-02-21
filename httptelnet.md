@@ -43,7 +43,7 @@ First, ensure Telnet is installed on your computer by pressing Windows key then 
 Ensure Python is installed on your computer (it comes ArcGIS Pro). You can verify the installation using the Windows Start menu and typing Python, and it will show `Python Command Prompt`. 
 You can also check for `python.exe`, which is the ArcGIS Pro default installation directory for it: `C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3`. 
 
-### Start a Simple HTTP Server
+## Start Python's Simple HTTP Server
 - Click on the `Python Command Prompt`.
 - Navigate to the directory you want to serve using CD and type the path you want. For example, if you have a folder named `c:\gisworkspace\geom170` containing HTML files you'd like to serve, navigate to it using `cd c:\gisworkspace\geom170`.
 - Start the server by running the following command:
@@ -52,21 +52,21 @@ You can also check for `python.exe`, which is the ArcGIS Pro default installatio
     ```
     This command tells Python to start its built-in HTTP server on TCP port 8000. You can use any available port, but 8000 is a common choice for testing. 
 
-### Test using a web browser
+## Test Python's HTTP server is running using a web browser
 
- - Open a web browser and try accessing your new webserver at `http://localhost:8000` to see if it lists the files in the directory where it was ran. If it does not, check your settings above. 
+ - Open a web browser (Chrome or Firefox) and try accessing your new webserver at `http://localhost:8000` to see if it lists the files in the directory where it was ran. If it does not, check your settings above. 
 
-### Start Telnet: Open Another Command Prompt Window
+## Open Another Command Prompt Window
 You'll need a separate window to connect to the server using Telnet because the first window is now occupied by the HTTP server.
 
-### Step 4: Connect Using Telnet
+## Run and Connect using Telnet
 In the new terminal window, connect to your local server using Telnet by typing:
 ```
 telnet localhost 8000
 ```
 Here, `localhost` is the hostname for your local machine, and `8000` is the port where your server is running.
 
-### Step 5: Make an HTTP Request
+## Type your HTTP GET Request
 Note: When you type you will NOT see those characters on screen in Telnet, but they are being sent to the web server. You also cannot use backspace to fix errors, so if you mistype start this step over!
 
 After the connection is established, type your HTTP request. To request the homepage (or the directory listing if no index.html is present), type:
@@ -76,16 +76,16 @@ Host: localhost
 ```
 Then, press Enter twice to finish the request.
 
-### Step 6: Observe the Response
-You should see the HTTP response from your local server, including the status code, headers, and the content of the requested file or directory listing.
+## Observe the Response
+You should see the HTTP response from your local server, including the status code, headers, and the content of the requested file or directory listing. You should also see the GET request on the python window. 
 
-### Step 7: Close the Connection
+## Close the Telnet Connection
 To exit the Telnet session, type `^]` (Control key plus the right square bracket key), and then type `quit` at the Telnet prompt. Alternatively, you can close the terminal window.
 
-### Step 8: Stop the HTTP Server
+## Stop the Python HTTP Server
 When you're finished experimenting, you can stop the HTTP server by going back to the first terminal window and pressing `Ctrl+C` to terminate the server process.
 
-### Important Notes
+## Important Notes
 - This exercise is excellent for understanding basic HTTP interactions. It's very rudimentary and serves educational purposes more than practical application.
 - The Python HTTP server is intended for testing, development, or learning purposes and not for production use due to its basic nature and potential security implications.
 - Remember, the Telnet protocol does not support encrypted communications (HTTPS/SSL), so it's not suitable for transmitting sensitive information, even in a local testing environment.
