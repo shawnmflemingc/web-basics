@@ -1,3 +1,4 @@
+# Using Telnet to see GET requests against the Python local web server
 
 - **Telnet**: A network protocol used to provide a command-line interface for communicating with a remote device or server.
 - **HTTP (Hypertext Transfer Protocol)**: The foundation of data communication for the World Wide Web, used for transmitting hypermedia documents, such as HTML.
