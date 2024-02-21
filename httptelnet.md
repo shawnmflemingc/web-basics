@@ -1,4 +1,4 @@
-# Using Telnet to see GET requests against the Python local web server
+# Using Telnet to see GET requests with a local Python web server
 
 - **Telnet**: A network protocol used to provide a command-line interface for communicating with a remote device or server.
 - **HTTP (Hypertext Transfer Protocol)**: The foundation of data communication for the World Wide Web, used for transmitting hypermedia documents, such as HTML.
@@ -78,6 +78,14 @@ Then, press Enter twice to finish the request.
 
 ## Observe the Response
 You should see the HTTP response from your local server, including the status code, headers, and the content of the requested file or directory listing. You should also see the GET request on the python window. 
+
+## GET specific files
+To request a specific file from your web server, modify the GET request to include the path (directory) and filename:
+```
+GET /directory/filename.html HTTP/1.1
+Host: localhost
+```
+The `Host: localhost` portion specifies the domain you are requesting. For example, if this was getting a file from Fleming College's website the line would read `Host: flemingcollege.ca`. The reason it is specified is because a single web server can host many websites, each with their own name.
 
 ## Close the Telnet Connection
 To exit the Telnet session, type `^]` (Control key plus the right square bracket key), and then type `quit` at the Telnet prompt. Alternatively, you can close the terminal window.
