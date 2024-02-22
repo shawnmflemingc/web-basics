@@ -36,9 +36,9 @@ Remember the parts of a URL including the special characters that need to be the
 ![URL Example](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL/mdn-url-all.png)
 
 These characters MUST not be modified and the HTTP protocol uses them to understand what to do, and what to pass on to the web page. The next part (URL Encoding) is all about protecting these special characters. For example, what if you want to use google to search on a term using one of these characters, or even all of them! 
-In google, search for `:/?=&#` and see what it does in the URL. It replaces these characters with `%3A%2F%3F%3D%26%23`
+In google, search for `:/?=& #` and see what it does in the URL. It replaces these characters with `%3A%2F%3F%3D%26+%23` to avoid confusing the URL. Basically it "encodes" each individual character as a 2-character Hexadecimal number (16-base counting) with a percent % before letting whatever needs it that the characters are encoded that way. 
 
-## Part 2: URL Encoding
+## Part 2: URL Encoding Characters
 
 In a URL, certain characters must be encoded because they have special meanings or are not allowed in URLs. Encoding these characters ensures the URL is correctly interpreted by web browsers and servers. Here’s a guide to which characters should be encoded in a URL and best practices for URL encoding:
 
@@ -46,7 +46,7 @@ In a URL, certain characters must be encoded because they have special meanings 
 
 How to use Percent-Encoding:
 
-Convert each byte value to a hexadecimal representation. For example, the ASCII value for a space is 32 in decimal, which is 20 in hexadecimal.
+Convert each byte value to a hexadecimal representation. For example, the ASCII value for a space is 20 in hexadecimal.
 Prepend a % to the hexadecimal value. Thus, a space character is encoded as %20.
 
 Here's a table of frequently used characters and their hexadecimal values in URL encoding. These are commonly needed when constructing or interpreting URLs:
@@ -54,25 +54,20 @@ Here's a table of frequently used characters and their hexadecimal values in URL
 | Character | HEX | Encoded Form |
 |-----------|-------------|--------------|
 | Space     | 20          | %20 or +         |
-| " (Double Quote) | 22    | %22          |
 | # (Hash)  | 23          | %23          |
 | % (Percent) | 25        | %25          |
 | & (Ampersand) | 26      | %26          |
-| * (Asterisk) | 2A       | %2A          |
 | + (Plus)  | 2B          | %2B          |
 | , (Comma) | 2C          | %2C          |
 | / (Slash) | 2F          | %2F          |
 | : (Colon) | 3A          | %3A          |
-| ; (Semicolon) | 3B      | %3B          |
 | = (Equals) | 3D         | %3D          |
 | ? (Question Mark) | 3F  | %3F          |
-| @ (At Sign) | 40        | %40          |
-| \ (Backslash) | 5C      | %5C          |
-| ^ (Caret) | 5E          | %5E          |
 | \| (Vertical Bar) | 7C  | %7C          |
-| ~ (Tilde) | 7E          | %7E          |
 
-For a full list of Hexadecimal (HEX) codes, see the [ASCII table](https://www.asciitable.com/)
+These are just a few of the Hex codes. For a full list of Hexadecimal (HEX) codes, see the column Hx in the table [ASCII table](https://www.asciitable.com/)
+
+**Note** technically ALL characters can be encoded. For example, the letter `A` is `%41`. But there is no need to encode letters and numbers because they do not have special meaning to the parts of a URL. As well, it is not necessary to encode those special characters when they do have meaning. For example: the beginning of parameters is indicated by a `?` question mark in URLs. If that `?` character was encoded as %3F the `?` would no longer indicate parmeters start and the URL would be broken. The most common place for URL encoding to be required is in the value portion of parameters, so if trying to encode something that is not here really be sure it is necessary. As well, there would never be a case to encode any characters as part of a domain name. 
 
 ### Characters to be Encoded:
 
@@ -101,7 +96,7 @@ For a full list of Hexadecimal (HEX) codes, see the [ASCII table](https://www.as
 
 4. **Test Encoded URLs**: Test your encoded URLs to ensure they resolve to the correct resource. Special attention should be paid to complex URLs with many parameters or those using non-ASCII characters.
 
-5. **`%20` and `+`, they both mean `SPACE`**: If using `+` to encode spaces, don't make the mistake to encode it again. 
+5. **`%20` and `+` both represent `SPACE`**: If using `+` to encode spaces, don't make the mistake to encode the + itself as %2B. 
 
 Following these guidelines will help ensure that your URLs are correctly formatted and interpreted by web browsers and servers, enhancing the reliability and usability of your web applications.
 
