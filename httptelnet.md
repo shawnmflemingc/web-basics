@@ -113,7 +113,7 @@ Forming a manual request using TELNET is nice to see it in action, but is not ve
    - Opening the Developer Tools after the page might require a refresh of the page to see the network activity from the start. You can refresh the page by clicking the refresh button next to the address bar, pressing `F5` (hint, `SHIFT` + `F5` forces the web browser to retrieve a fresh copy of the web page into the browser, ignoring the cache made by previous requests).
 
 5. **Review GET Requests**:
-  - Hover over or click on a request to see more details on that individual request. The Name column shows the resource name or endpoint, while the Status column shows the HTTP status code (e.g., 200 for successful requests).
+   - Hover over or click on a request to see more details on that individual request. The Name column shows the resource name or endpoint, while the Status column shows the HTTP status code (e.g., 200 for successful requests).
 
 6. **Inspect Request Details**:
    - To see more details about a specific GET request, click on its name in the list. This will open a side panel with several tabs such as Headers, Preview, Response, etc.
