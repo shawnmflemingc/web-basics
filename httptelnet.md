@@ -3,6 +3,12 @@
 - **Telnet**: A network protocol used to provide a command-line interface for communicating with a remote device or server.
 - **HTTP (Hypertext Transfer Protocol)**: The foundation of data communication for the World Wide Web, used for transmitting hypermedia documents, such as HTML.
 
+### What You Learn
+
+- How to start a basic web server using a Python command
+- Submit a GET request manually by connecting to a web server
+- See requests made from the Chrome web browser using the F12 Developer tools
+
 To understand how HTTP works using Telnet and interacting with a local server created with Python's `http.server` module, follow these instructions:
 
 ## Install Telnet
@@ -56,17 +62,17 @@ You can also check for `python.exe`, which is the ArcGIS Pro default installatio
 
  - Open a web browser (Chrome or Firefox) and try accessing your new webserver at `http://localhost:8000` to see if it lists the files in the directory where it was ran. If it does not, check your settings above. 
 
-## Open Another Command Prompt Window
+### Open Another Command Prompt Window
 You'll need a separate window to connect to the server using Telnet because the first window is now occupied by the HTTP server.
 
-## Run and Connect using Telnet
+### Run and Connect using Telnet
 In the new terminal window, connect to your local server using Telnet by typing:
 ```
 telnet localhost 8000
 ```
 Here, `localhost` is the hostname for your local machine, and `8000` is the port where your server is running.
 
-## Type your HTTP GET Request
+### Type your HTTP GET Request
 Note: When you type you will NOT see those characters on screen in Telnet, but they are being sent to the web server. You also cannot use backspace to fix errors, so if you mistype start this step over!
 
 After the connection is established, type your HTTP request. To request the homepage (or the directory listing if no index.html is present), type:
@@ -76,10 +82,10 @@ Host: localhost
 ```
 Then, press Enter twice to finish the request.
 
-## Observe the Response
+### Observe the Response
 You should see the HTTP response from your local server, including the status code, headers, and the content of the requested file or directory listing. You should also see the GET request on the python window. 
 
-## GET specific files
+### GET specific files
 To request a specific file from your web server, modify the GET request to include the path (directory) and filename:
 ```
 GET /directory/filename.html HTTP/1.1
@@ -87,8 +93,33 @@ Host: localhost
 ```
 The `Host: localhost` portion specifies the domain you are requesting. For example, if this was getting a file from Fleming College's website the line would read `Host: flemingcollege.ca`. The reason it is specified is because a single web server can host many websites, each with their own name.
 
-## Close the Telnet Connection
+### Close the Telnet Connection
 To exit the Telnet session, type `^]` (Control key plus the right square bracket key), and then type `quit` at the Telnet prompt. Alternatively, you can close the terminal window.
+
+## See how Chrome web browser makes GET requests
+
+Forming a manual request using TELNET is nice to see it in action, but is not very easy. It is possible to see the GET requests made from a web browser. To view GET requests made by a webpage in Chrome's Developer Tools, follow these steps:
+
+1. **Open Developer Tools**:
+   - Open Chrome's Developer Tools by pressing `F12`, or right-clicking on the webpage and selecting "Inspect" from the context menu, or by using the keyboard shortcut `Ctrl+Shift+I`.
+
+2. **Go to the Network Tab**:
+   - Once the Developer Tools pane is open, locate and click on the "Network" tab. This tab shows all the network activity for the current webpage. Sometimes it is easier to change the settings to have the developer tools along the [bottom of your browser window](https://developer.chrome.com/docs/devtools/customize#placement).
+
+3. **Initiate Network Activity**:
+   - Opening the Developer Tools after the page might require a refresh of the page to see the network activity from the start. You can refresh the page by clicking the refresh button next to the address bar, pressing `F5` (hint, `SHIFT` + `F5` forces the web browser to retrieve a fresh copy of the web page into the browser, ignoring the cache made by previous requests).
+
+4. **Review GET Requests**:
+   - Hover over or click on a request to see more details on that individual request. The Name column shows the resource name or endpoint, while the Status column shows the HTTP status code (e.g., 200 for successful requests).
+
+5. **Inspect Request Details**:
+   - To see more details about a specific GET request, click on its name in the list. This will open a side panel with several tabs such as Headers, Preview, Response, etc.
+   - The "Headers" tab shows all the request and response headers. Look for the "Request Method" in the request headers section to confirm it's a GET request.
+   - The "Response" tab shows the actual data returned by the server in response to the GET request.
+
+6. **Useful Features**:
+   - **Preserve Log**: You can check the "Preserve log" checkbox to keep the network log across page loads, which is useful for tracking network activity during page navigation or redirects.
+   - **Clear**: You can clear the current network log by clicking the "Clear" button (a circle with a line through it) before refreshing the page or initiating new network activity to focus on the new requests.
 
 ## Stop the Python HTTP Server
 When you're finished experimenting, you can stop the HTTP server by going back to the first terminal window and pressing `Ctrl+C` to terminate the server process.
@@ -98,4 +129,4 @@ When you're finished experimenting, you can stop the HTTP server by going back t
 - The Python HTTP server is intended for testing, development, or learning purposes and not for production use due to its basic nature and potential security implications.
 - Remember, the Telnet protocol does not support encrypted communications (HTTPS/SSL), so it's not suitable for transmitting sensitive information, even in a local testing environment.
 
-By setting up a simple local HTTP server and interacting with it via Telnet, you gain a practical understanding of how web servers and HTTP requests work.
+By setting up a simple local HTTP server and interacting with it via Telnet and Chrome, you gain a practical understanding of how web servers and HTTP requests work.
