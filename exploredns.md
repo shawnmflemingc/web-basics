@@ -1,9 +1,15 @@
 # Exploring Domain Name System
 
+### What You Learn
+- **DNS Resolution**: How domain names are translated into IP addresses.
+- **Reverse DNS Lookup**: Finding the domain name associated with a specific IP address.
+- **Nameservers**: The servers that store DNS records for domains.
+- **Mail Servers (MX Records)**: The servers that handle email for a domain, and other types of DNS entries.
+
 Understanding how the Domain Name System (DNS) works is crucial in grasping how the internet operates. DNS translates human-readable domain names (like `www.flemingcollege.ca`) into IP addresses that computers use to identify each other on the network. Here’s a simple activity to learn how DNS works, using the command line to perform DNS queries and observe the results:
 
 ## Activity Overview
-You'll use the `nslookup` command, available on most operating systems, to query domain names and see the IP addresses they resolve to. This activity will help you understand the process of DNS resolution.
+You'll use the `nslookup` command, available on windows command line, to query domain names and see the IP addresses they resolve to. This activity will help you understand the process of DNS resolution.
 
 ### Step 1: Open Your Command Line Interface
 Open Windows Command Prompt by typing `cmd` in the search bar, or finding `command prompt` in the start menu.
@@ -13,7 +19,7 @@ Type the following command and press Enter:
 ```
 nslookup www.flemingcollege.ca
 ```
-Replace `www.flemingcollege.ca` with any domain you're interested in. This command performs a DNS lookup for the domain and returns the corresponding IP address.
+Try other lookups by replacing `www.flemingcollege.ca` with any domain you're interested in. This command performs a DNS lookup for the domain and returns the corresponding IP address.
 
 ### Step 3: Observe the Results
 The output will show the server used for the lookup and the IP address for the domain you queried. It might look something like this:
@@ -72,13 +78,4 @@ DNS (Domain Name System) provide more than the website information, it also prov
 - **Purpose**: Allows the domain administrator to insert arbitrary text into the DNS record. Often used for email security protocols like SPF (Sender Policy Framework) and DKIM (DomainKeys Identified Mail).
 - **Example**: `v=spf1 include:_spf.example.com ~all`
 
-Each of these DNS record types plays a vital role in the operation and management of internet domains, influencing how traffic is routed, how email is delivered, and how domain names are resolved.
-
-
-### What You Learn
-- **DNS Resolution**: How domain names are translated into IP addresses.
-- **Reverse DNS Lookup**: Finding the domain name associated with a specific IP address.
-- **Nameservers**: The servers that store DNS records for domains.
-- **Mail Servers (MX Records)**: The servers that handle email for a domain, and other types of DNS entries.
-
-This activity gives you hands-on experience with DNS, helping you understand how domain names are resolved to IP addresses and vice versa, which is a fundamental aspect of how the internet works.
+There are other types of DNS records, but these are the most common. Each of these DNS record types plays a vital role in the operation and management of internet domains, influencing how traffic is routed, how email is delivered, and how domain names are resolved.
