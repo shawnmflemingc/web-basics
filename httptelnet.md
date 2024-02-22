@@ -100,24 +100,27 @@ To exit the Telnet session, type `^]` (Control key plus the right square bracket
 
 Forming a manual request using TELNET is nice to see it in action, but is not very easy. It is possible to see the GET requests made from a web browser. To view GET requests made by a webpage in Chrome's Developer Tools, follow these steps:
 
-1. **Open Developer Tools**:
-   - Open Chrome's Developer Tools by pressing `F12`, or right-clicking on the webpage and selecting "Inspect" from the context menu, or by using the keyboard shortcut `Ctrl+Shift+I`.
+1. **Open Chrome and the Developer Tools**:
+   - Open Chrome then open the Developer Tools by pressing `F12`, or right-clicking on the webpage and selecting "Inspect" from the context menu, or by using the keyboard shortcut `Ctrl+Shift+I`.
 
-2. **Go to the Network Tab**:
+2. **Access Localhost Web Server**
+   - Type in `http://localhost:8000` in the URL then press `Enter` to connect to your running python web server (or any other website).    
+
+3. **Go to the Network Tab**:
    - Once the Developer Tools pane is open, locate and click on the "Network" tab. This tab shows all the network activity for the current webpage. Sometimes it is easier to change the settings to have the developer tools along the [bottom of your browser window](https://developer.chrome.com/docs/devtools/customize#placement).
 
-3. **Initiate Network Activity**:
+4. **Initiate Network Activity**:
    - Opening the Developer Tools after the page might require a refresh of the page to see the network activity from the start. You can refresh the page by clicking the refresh button next to the address bar, pressing `F5` (hint, `SHIFT` + `F5` forces the web browser to retrieve a fresh copy of the web page into the browser, ignoring the cache made by previous requests).
 
-4. **Review GET Requests**:
-   - Hover over or click on a request to see more details on that individual request. The Name column shows the resource name or endpoint, while the Status column shows the HTTP status code (e.g., 200 for successful requests).
+5. **Review GET Requests**:
+  - Hover over or click on a request to see more details on that individual request. The Name column shows the resource name or endpoint, while the Status column shows the HTTP status code (e.g., 200 for successful requests).
 
-5. **Inspect Request Details**:
+6. **Inspect Request Details**:
    - To see more details about a specific GET request, click on its name in the list. This will open a side panel with several tabs such as Headers, Preview, Response, etc.
    - The "Headers" tab shows all the request and response headers. Look for the "Request Method" in the request headers section to confirm it's a GET request.
    - The "Response" tab shows the actual data returned by the server in response to the GET request.
 
-6. **Useful Features**:
+7. **Useful Features**:
    - **Preserve Log**: You can check the "Preserve log" checkbox to keep the network log across page loads, which is useful for tracking network activity during page navigation or redirects.
    - **Clear**: You can clear the current network log by clicking the "Clear" button (a circle with a line through it) before refreshing the page or initiating new network activity to focus on the new requests.
 
