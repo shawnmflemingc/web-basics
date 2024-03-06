@@ -1,11 +1,5 @@
 # MapBox Static API playground
-Open the following and pan the map around to generate a MapBox static maps URL
-
-```
-https://docs.mapbox.com/playground/static/
-```
-
-which will fill in the missing parts indicated below:
+Open the URL https://docs.mapbox.com/playground/static/ and use the provided tool to pan the map around. This is a website to explore and modify the provided URL to load a specific area. It has many parts that need to be filled in before the request will work (indicated below using brackets around a value, like this: `{value}` where you must replace it with an appropriate input (PS do not keep the `{bracket}` around it!). 
 
 ```
 https://api.mapbox.com/styles/v1/{username}/{style_id}/static/{overlay}/{lon},{lat},{zoom},{bearing},{pitch}|{auto}|{bbox}/{width}x{height}{padding}{@2x}?access_token={YOUR_ACCESS_TOKEN]
