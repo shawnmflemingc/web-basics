@@ -6,12 +6,13 @@ https://docs.mapbox.com/playground/static/
 which will fill in the missing parts indicated below:
 
 `
-https://api.mapbox.com/styles/v1/{username}/{style_id}/static/{overlay}/{lon},{lat},{zoom},{bearing},{pitch}|{auto}|{bbox}/{width}x{height}{padding}{@2x}
+https://api.mapbox.com/styles/v1/{username}/{style_id}/static/{overlay}/{lon},{lat},{zoom},{bearing},{pitch}|{auto}|{bbox}/{width}x{height}{padding}{@2x}?access_token={YOUR_ACCESS_TOKEN]
 `
+See the full API guide here: https://docs.mapbox.com/api/maps/static-images/
 
 This URL tells Mapbox's Static API service exactly what map you want. To understand how to use Mapbox's Static API, review below to test
 
-### Understanding the URL Structure
+## Understanding the URL Structure
 
 A typical URL consists of several parts, each serving a specific function:
 
@@ -21,9 +22,9 @@ A typical URL consists of several parts, each serving a specific function:
 
 3. **Path**: After the domain, the path specifies the location on the server where the specific resources (like an API endpoint) can be found. For instance, `/styles/v1/mapbox/streets-v11/static/` could be a path to a specific style of map in the Static API.
 
-4. **Parameters**: These are additional options that you can add to the URL to customize the request. They are added after a `?` and separated by `&`. Each parameter has a key and a value, like `zoom=10` or `size=600x400`.
+4. **Parameters**: These are additional options that you can add to the URL to customize the request. They are added after a `?` and separated by `&`. Each parameter has a key and a value, which MapBox Static API uses one required parameter to specify the `access_token`. If there were other URL parameters to add, it would required a & for the next set of key and value pair. For example, `?first=value1&second=number2&third=3` has three parameter values, the first has a value of value1, and the second parameter second has a value of number2. Can you tell what the 3rd parameter value is?
 
-### Constructing a Mapbox Static API URL
+## Constructing a Mapbox Static API URL
 
 To use Mapbox's Static API, you'll need to construct a URL that specifies the map's style, location, size, and more. Here's a step-by-step guide:
 
@@ -35,7 +36,7 @@ To use Mapbox's Static API, you'll need to construct a URL that specifies the ma
 
 4. **Add API Access Token**: To authenticate your request, you'll need to add your Mapbox access token as a parameter. This is done by appending `?access_token=YOUR_MAPBOX_ACCESS_TOKEN` to the end of the URL.
 
-### Example URL
+## Example URL
 
 Putting it all together, a complete URL to request a static map image might look like this:
 
