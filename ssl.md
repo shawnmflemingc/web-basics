@@ -48,9 +48,13 @@ You can use this tool to experiment with HTTP and HTTPS as follows:
    - Try accessing `http://portquiz.net:443`. This attempts to establish an HTTP connection over the port typically used for HTTPS.
    - Since port 443 is conventionally used for secure HTTPS connections, you must specifically make the request using HTTP:// or it will return an SSL error because the request has no certificate.
 
-2. **Accessing with HTTPS on Port 443, the default:**
+2. **Accessing with HTTPS using Default Port 443, the default:**
    - Accessing `https://portquiz.net` (without specifying the port) will use the default HTTPS port (443). This should work normally, as the server expects secure connections on this port. However in this case, the server has no certificate and the request is denied.
 
-3. **Generating an Error:**
-   - If you try to access `https://portquiz.net:80`, you're again attempting to establish a secure HTTPS connection over the default HTTP port. Since this website has no capabilities for HTTPS/is not configured for encrypted traffic, the server will not respond correctly, leading to an error or timeout.
+3. **Accessing with HTTPS on any port:**
+   - If you try to access `https://portquiz.net:80`, you're again attempting to establish a secure HTTPS connection over the default HTTP port. Since this website has no capabilities for HTTPS/is not configured for encrypted traffic, the server will not respond correctly, leading to an error or timeout. Any request using HTTPS will fail on this site because it has no capability of responding to SSL requests.
+
+# Should you include the port in a URL?
+
+The protocol portion of a URL, HTTP or HTTPS, specifies if the request is going to need an SSL certificate or not, is completely independent to what port is being used. If no port is specified, for `HTTP` the TCP port of `80` is used by default, and for `HTTPS` `443` is used by default. If your request is going to use the default ports (80 or 443), **do not include them**. 
 
