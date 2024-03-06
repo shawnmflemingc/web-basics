@@ -69,13 +69,21 @@ Here are some questions to guide your exploration:
 3. **How does changing the zoom level in the URL affect the map's detail?**
    - Experiment with different zoom levels in your API requests. Observe how increasing or decreasing the zoom level changes the amount of detail on the map.
 
-4. **How can you center a map on a specific landmark or location using latitude and longitude coordinates?**
+4. **How can you centre a map on a specific landmark or location using latitude and longitude coordinates?**
    - Choose a landmark or location, find its coordinates, and use them in your API request. Note how the map centers on the specified point. Try using the Frost campus location at 44.341474, -78.741117.
 
 5. **What happens when you switch the map style in the API request?**
-   - Try different style IDs (like `streets-v11`, `outdoors-v11`, `light-v10`, `dark-v10`, etc.) in your request and observe how the map's appearance changes.
+   - Try different style IDs (like `streets-v11`, `outdoors-v11`, `light-v10`, `dark-v10`, etc.) in your request and observe how the map's appearance changes. See the various styles at https://docs.mapbox.com/api/maps/styles/#mapbox-styles. 
 
-6. **Can you display a map that shows the traffic layer?**
+6. **What is at this location**
+   - Take a look at the location latitude 43.429111, longitude -80.330861 using an aerial image for a fun surprise. 
+<details>
+   <summary>Click for answer:</summary>
+```
+   https://api.mapbox.com/styles/v1/mapbox/satellite-v9/static/-80.330861,43.429111,15,0/300x200?access_token=YOUR_MAPBOX_ACCESS_TOKEN
+```
+</details>
+8. **Can you display a map that shows the traffic layer?**
    - Explore the documentation to find out how to overlay real-time traffic information on your map.
 
 ## Advanced Exploration
