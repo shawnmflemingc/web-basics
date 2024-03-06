@@ -1,8 +1,10 @@
+# Google Maps Static API playground
+
 The Google Maps Static API allows you to generate static map images that can be embedded in websites, applications, or any digital platform. This service is useful for scenarios where an interactive map is unnecessary, and a simple map image suffices. To use the Google Maps Static API, you need to construct a URL with specific parameters that define the map's appearance and content.
 
 Here's a basic introduction to using the Google Maps Static API:
 
-# Obtaining an API Key
+## Obtaining an API Key
 Before you can start using the Google Maps Static API, you need to obtain an API key from Google. This key is essential for authenticating your requests to the Google Maps platform. You can get your API key by signing up or logging into your Google Cloud account, creating a project, and enabling the Maps Static API for that project. This will require a credit card and you to set up billing, as Google Cloud Platform provides you with a free trial period but may require billing information for continued use beyond the trial. The tasks here will not come close to the free tier (seen here https://mapsplatform.google.com/pricing/)
 
 Official steps by Google to do this: https://developers.google.com/maps/documentation/maps-static/get-api-key
