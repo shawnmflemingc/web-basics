@@ -11,23 +11,23 @@ Official steps by Google to do this: https://developers.google.com/maps/document
 
 To generate a Google Maps Static API project, create an API key limited to the Static Maps API, and restrict it to localhost and your current computer's public IP address, you can follow these steps based on the information gathered:
 
-## Step 1: Create a Google Cloud Project
+### Step 1: Create a Google Cloud Project
 1. Log in to the [Google Cloud Console](https://console.cloud.google.com/).
 2. Click the Menu Bar (Hamburger Icon) > IAM & Admin, and create a new Project.
 3. Enter a descriptive name for your project and leave the Location field as default.
 4. Click "Create" to set up your new project.
 
-## Step 2: Enable Google Workspace APIs
+### Step 2: Enable Google Workspace APIs
 1. In the Google Cloud Console, navigate to APIs & Services > Library.
 2. Search for "Maps Static API" and click on the API in the search results.
 3. Click "Enable" to activate the Maps Static API for your project.
 
-## Step 3: Create API Access Credentials
+### Step 3: Create API Access Credentials
 1. Go to APIs & Services > Credentials in the Google Cloud Console.
 2. Click "Create credentials" and choose "API key" from the options.
 3. Your new API key will be displayed. Make sure to copy this API key for use in your application. You can also find it later in the "API keys" section under Credentials.
 
-## Step 4: Restrict Your API Key
+### Step 4: Restrict Your API Key
 To ensure your API key is secure and can only be used in your specified environments, you'll want to apply restrictions:
 1. Go to the Credentials page where your API keys are listed.
 2. Click on the edit icon next to your API key to modify its settings.
@@ -35,7 +35,7 @@ To ensure your API key is secure and can only be used in your specified environm
 4. Add your localhost address (e.g., `http://localhost/*`) and your current public IP address (google `what's my ip` to find it!) to the list of allowed IP addresses. This ensures the key can only be used from these sources.
 5. Save your changes.
 
-## Step 5: Use Your API Key
+### Step 5: Use Your API Key
 Once you've set up and restricted your API key, you can use it in your application. For web applications, include the API key in your requests to the Maps Static API, like so:
 
 ```
@@ -48,7 +48,7 @@ Be sure to replace `YOUR_API_KEY` with the actual API key you just created. Now 
 
 By following these steps, you'll be able to securely use the Google Maps Static API restricted to specific environments, ensuring the safety and integrity of your API key.
 
-## Constructing the API Request URL
+## Constructing a Google Static Maps API Request
 
 https://developers.google.com/maps/documentation/maps-static/start#URL_Parameters
 
