@@ -1,16 +1,19 @@
 # MapBox Static API playground
 Open the following and pan the map around to generate a MapBox static maps URL
 
+```
 https://docs.mapbox.com/playground/static/
+```
 
 which will fill in the missing parts indicated below:
 
-`
+```
 https://api.mapbox.com/styles/v1/{username}/{style_id}/static/{overlay}/{lon},{lat},{zoom},{bearing},{pitch}|{auto}|{bbox}/{width}x{height}{padding}{@2x}?access_token={YOUR_ACCESS_TOKEN]
-`
-See the full API guide here: https://docs.mapbox.com/api/maps/static-images/
-
+```
 This URL tells Mapbox's Static API service exactly what map you want. To understand how to use Mapbox's Static API, review below to test
+
+### See the full API guide here: https://docs.mapbox.com/api/maps/static-images/
+
 
 ## Understanding the URL Structure
 
@@ -50,7 +53,7 @@ For more detailed information and advanced options, check the [Mapbox Static Ima
 
 # Exploring the Mapbox Static API
 
-Here are some questions to guide your exploration:
+Try modifying the URL yourself without the provided web tool. Here are some questions to guide your exploration:
 
 ## Getting Started
 
