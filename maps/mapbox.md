@@ -80,22 +80,8 @@ Try modifying the URL yourself without the provided web tool. Here are some ques
 https://api.mapbox.com/styles/v1/mapbox/satellite-v9/static/-80.330861,43.429111,17,0/300x200?access_token=YOUR_MAPBOX_ACCESS_TOKEN
 </details>
 
-8. **Can you display a map that shows the traffic layer?**
+7. **Can you display a map that shows the traffic layer?**
    - Explore the documentation to find out how to overlay real-time traffic information on your map.
 
-## Advanced Exploration
-
-7. **How do you add markers or overlays to a Static Map?**
-   - Investigate the process of adding markers, lines, or polygons to your map image through the API request. Experiment with adding a marker at a specific location.
-
-8. **Is it possible to generate a static map with multiple locations marked?**
-   - Try to construct a URL that includes multiple markers. Consider how each marker's position is specified and how they are separated in the URL.
-
-9. **How would you create a map showing a specific route or path?**
-   - Look into how to draw lines or paths on the map to represent routes. Experiment with creating a static map that displays a route between two or more points.
-
-10. **Can you create a static map showing a custom style you've designed in Mapbox Studio?**
-    - If you have a custom style created in Mapbox Studio, find its style ID and use it in your Static API request. Compare the custom-styled map with the default styles provided by Mapbox.
-
-By answering these questions and following through with the exercises, you'll gain a deeper understanding of the Mapbox Static API and its capabilities. 
+By answering these questions and following through with the exercises, you'll gain a deeper understanding of how URLs work using Mapbox Static API as an example. 
 Remember to respect Mapbox's [terms of service](https://www.mapbox.com/legal/tos/) and usage limits when using the API.
