@@ -27,7 +27,7 @@ A typical URL consists of several parts, each serving a specific function:
 
 To use Mapbox's Static API, you'll need to construct a URL that specifies the map's style, location, size, and more. Here's a step-by-step guide:
 
-1. **Start with the Base URL**: The base URL for Mapbox's Static API looks something like this: `https://api.mapbox.com/styles/v1/{username}/{style_id}/static/`. You'll need to replace `{username}` with your Mapbox username and `{style_id}` with the ID of the map style you want to use.
+1. **Start with the Base URL**: The base URL for Mapbox's Static API looks something like this: `https://api.mapbox.com/styles/v1/{username}/{style_id}/static/`. You'll need to replace `{username}` with your Mapbox username and `{style_id}` with the ID of the map style defined in the account specified that you want to use. If using the pre-defined styles from https://docs.mapbox.com/api/maps/styles/#mapbox-styles, then the username is going to be `mapbox` because that is where the style is defined.  
 
 2. **Specify the Location**: After the base URL, you need to specify the longitude, latitude, and zoom level for your map. This part of the URL looks like `{longitude},{latitude},{zoom}`. For example, `-122.4241,37.78,14` could represent a longitude of -122.4241, a latitude of 37.78, and a zoom level of 14.
 
