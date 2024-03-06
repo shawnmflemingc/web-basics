@@ -76,13 +76,12 @@ Here are some questions to guide your exploration:
    - Try different style IDs (like `streets-v11`, `outdoors-v11`, `light-v10`, `dark-v10`, etc.) in your request and observe how the map's appearance changes. See the various styles at https://docs.mapbox.com/api/maps/styles/#mapbox-styles. 
 
 6. **What is at this location**
-   - Take a look at the location latitude 43.429111, longitude -80.330861 using an aerial image for a fun surprise. 
+   - Zoom close to location latitude 43.429111, longitude -80.330861 using an aerial image map style for a fun surprise. 
 <details>
-   <summary>Click for answer:</summary>
-```
-   https://api.mapbox.com/styles/v1/mapbox/satellite-v9/static/-80.330861,43.429111,15,0/300x200?access_token=YOUR_MAPBOX_ACCESS_TOKEN
-```
+   <summary>Click for answer (add your token):</summary>
+https://api.mapbox.com/styles/v1/mapbox/satellite-v9/static/-80.330861,43.429111,17,0/300x200?access_token=YOUR_MAPBOX_ACCESS_TOKEN
 </details>
+
 8. **Can you display a map that shows the traffic layer?**
    - Explore the documentation to find out how to overlay real-time traffic information on your map.
 
