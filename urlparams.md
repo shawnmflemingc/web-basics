@@ -70,7 +70,7 @@ These are just a few of the Hex codes. For a full list of Hexadecimal (HEX) code
 **Notes** technically ALL characters can be encoded. 
 
 - The letter `A` can be encoded as `%41`, but there is no need to encode alpha-numeric characters (letters and numbers) because they do not have special meaning to the parts of a URL.
-- Do not encode special characters when they do have meaning in a URL. For example the beginning of URL parameters is indicated by a `?` (question mark). If that `?` character was encoded as `%3F` the `?` would no longer indicate parmeters start and the URL would be broken. 
+- Do not encode special characters when they do have meaning in a URL. For example the beginning of URL parameters is indicated by a `?` (question mark). If that `?` character was encoded as `%3F` the `?` would no longer indicate parameters start and the URL would be broken. 
 - The most common place for URL encoding to be required is in the value portion of parameters, so if trying to encode something that is not a parameter value, be sure it is necessary.
 - There would never be a case to encode any characters as part of a domain name. 
 
