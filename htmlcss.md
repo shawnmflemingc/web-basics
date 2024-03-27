@@ -89,7 +89,10 @@ h1 {
 
 ### Link to external CSS
 
-To link an external CSS file to an HTML document, you use the `<link>` tag inside the `<head>` section of your HTML file:
+> [!TIP]
+> External CSS files are great to share the same CSS among multiple pages and is a best practice to use. 
+
+To link an external CSS file to an HTML document, you use the `<link>` tag inside the `<head>` section of your HTML file naming your file with the `.css` extension:
 
 ```html
 <head>
@@ -97,6 +100,18 @@ To link an external CSS file to an HTML document, you use the `<link>` tag insid
 </head>
 ```
 
+Here is what the styles.css file would look like:
+
+```css
+# This file uses CSS syntax only, never put HTML in it!
+body {
+  background-color: linen;
+}
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+```
 This link tells the browser to fetch and apply the styles from `styles.css` to the HTML document. Never include the `<style>` HTML tag in this external document. 
 
 Experimentation and practice are key to learning HTML and CSS, so try creating simple pages and gradually incorporate more complex structures and styles using the https://w3schools.com/html and https://w3schools.css websites.
