@@ -95,9 +95,5 @@ footer {
 > - **Consistency**: Make sure your design is consistent throughout. Use the same font styles, colors, and sizes for similar elements.
 > - **Responsiveness**: Consider how your resume will look on different devices. You might not delve into this immediately, but it's something to keep in mind as you learn more about CSS, specifically media queries.
 
-## Learning Resources
-
-- **W3Schools (HTML and CSS sections)**: Great for beginners with plenty of examples.
-- **Mozilla Developer Network (MDN)**: Offers more in-depth explanations and is a great resource as you become more comfortable with the basics.
 
 Start by playing around with simple designs and gradually introduce more complex CSS properties and HTML elements as you become more comfortable.
