@@ -70,7 +70,7 @@ In the new terminal window, connect to your local server using Telnet by typing:
 ```
 telnet localhost 8000
 ```
-Here, `localhost` is the hostname for your local machine, and `8000` is the port where your server is running.
+Here, `localhost` is the hostname for your local machine, and `8000` is the TCP port where your server is running as defined above in how you started it.
 
 ### Type your HTTP GET Request
 > [!IMPORTANT]
@@ -129,7 +129,7 @@ Forming a manual request using TELNET is nice to see it in action, but is not ve
    - **Clear**: You can clear the current network log by clicking the "Clear" button (a circle with a line through it) before refreshing the page or initiating new network activity to focus on the new requests.
 
 ## Stop the Python HTTP Server
-When you're finished experimenting, you can stop the HTTP server by going back to the first terminal window and pressing `Ctrl+C` to terminate the server process.
+When you're finished experimenting, you can stop the HTTP server by going back to the first terminal window and pressing `CTRL+C` to terminate the server process.
 
 > [!NOTE]
 > This exercise is excellent for understanding basic HTTP interactions. It's very rudimentary and serves educational purposes more than practical application.
