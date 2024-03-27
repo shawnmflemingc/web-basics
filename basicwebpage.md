@@ -87,7 +87,8 @@ footer {
 }
 ```
 
-> [!TIP] Tips for Effective Resume Layout Design
+> [!TIP]
+> Effective Resume Layout Design
 >
 > - **Simplicity is Key**: Keep your design simple and professional. Avoid overusing colors and fonts.
 > - **Hierarchy**: Use headings (h1, h2, etc.) to define a clear hierarchy. Your name could be an `h1` (the most important), while section titles could be `h2`s, and so on.
