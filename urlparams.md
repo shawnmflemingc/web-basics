@@ -23,19 +23,19 @@ You will use Google Search to observe how search queries are represented in the 
 
 ## Understanding Special Characters in a URL
 
-Remember the parts of a URL including the special characters that need to be there. First, a URL cannot have spaces. So the URL has these special characters to partition its parts. 
+Remember the parts of a URL including the special characters that are NEVER encoded (like the :// in https://domain). First, a URL cannot have spaces, so URLs use special characters to partition its parts: 
 
- - The `://` is between the scheme (protocol) and the domain
- - the `:` optionally specifies what port is going to be used
- - `/` are used in the path
- - `?` is the end of the file path and the beginning of the parameters
- - `=` separates the parameter key and value
- - `&` adds another key/value pair parameter
- - `#` denotes an anchor to jump to on the page
+ - The `://` is between the protocol (scheme) and the full domain
+ - the `:` optionally specifies what port is going to be used (only use this if not using the default 80 or 443 port numbers)
+ - `/` are used in the path between folders and filenames, or to load particular parts of of application (see each specific API). This portion can be case sensitive. 
+ - `?` is the end of the file path and the beginning of the parameters portion of the URL
+ - `=` separates each the parameter key and value, which there must be both (this portion is case sensitive)
+ - `&` adds subsequent key/value pair parameters after the first
+ - `#` denotes end of parameters and specifies a single anchor to scroll to on the loaded page
 
 ![URL Parts](images/urlparts.png)
 
-These characters MUST not be modified and the HTTP protocol uses them to understand what to do, and what to pass on to the web page. The next part (URL Encoding) is all about protecting these special characters. For example, what if you want to use google to search on a term using one of these characters, or even all of them! 
+These specific characters (`://` `:` `/` `?` `=` `&` `#`) MUST not be encoded as the HTTP protocol uses them to understand the parts of the provided URL. The next part (URL Encoding) is all about protecting these special characters so the protocol does not get confused with provided values. For example, what if you want to use google to search on a term using one of these characters like a hashtag `#`?
 In google, search for `:/?=& #` and see what it does in the URL. It replaces these characters with `%3A%2F%3F%3D%26+%23` to avoid confusing the URL. Basically it "encodes" each individual character as a 2-character Hexadecimal number (16-base counting) with a percent % before letting whatever needs it that the characters are encoded that way. 
 
 ## Part 2: URL Encoding Characters
