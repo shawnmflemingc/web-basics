@@ -1,6 +1,8 @@
+# HTML and CSS
+
 HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the foundation of web development. HTML provides the structure of the page, while CSS specifies the page's layout, colors, and fonts. Together, they allow you to create visually engaging and structured web pages.
 
-### HTML Basics
+## HTML Basics
 
 HTML uses **tags** to mark up the content, telling the web browser how to display it. These tags are enclosed in angle brackets, like `<tagname>content</tagname>`. While HTML is not case sensitive, it is a best practice to have it in lowercase. Here are some basic HTML elements:
 
@@ -14,7 +16,7 @@ HTML uses **tags** to mark up the content, telling the web browser how to displa
 - **`<a href="URL">`**: Creates a hyperlink to another HTML page or document to download.
 - **`<img src="imageURL" alt="text">`**: Embeds an image.
 
-### CSS Basics
+## CSS Basics
 
 CSS is used to style the HTML content. It can be included in three ways: inline, internal, or external. Most professional websites use external CSS files to keep content and design separate.
 
@@ -41,7 +43,7 @@ h1 {
 
 This CSS will set the background color of the entire page to light blue and give all `<h1>` elements a navy color with a margin on the left.
 
-### Combining HTML and CSS
+## Combining HTML and CSS
 
 To link an external CSS file to an HTML document, you use the `<link>` tag inside the `<head>` section of your HTML file:
 
