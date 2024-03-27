@@ -127,9 +127,9 @@ Forming a manual request using TELNET is nice to see it in action, but is not ve
 ## Stop the Python HTTP Server
 When you're finished experimenting, you can stop the HTTP server by going back to the first terminal window and pressing `Ctrl+C` to terminate the server process.
 
-## Important Notes
-- This exercise is excellent for understanding basic HTTP interactions. It's very rudimentary and serves educational purposes more than practical application.
-- The Python HTTP server is intended for testing, development, or learning purposes and not for production use due to its basic nature and potential security implications.
-- Remember, the Telnet protocol does not support encrypted communications (HTTPS/SSL), so it's not suitable for transmitting sensitive information, even in a local testing environment.
+> [!NOTE]
+> This exercise is excellent for understanding basic HTTP interactions. It's very rudimentary and serves educational purposes more than practical application.
+> The Python HTTP server is intended for testing, development, or learning purposes and not for production use due to its basic nature and potential security implications.
+> Remember, the Telnet protocol does not support encrypted communications (HTTPS/SSL), so it's not suitable for transmitting sensitive information, even in a local testing environment.
 
 By setting up a simple local HTTP server and interacting with it via Telnet and Chrome, you gain a practical understanding of how web servers and HTTP requests work.
