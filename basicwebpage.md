@@ -1,11 +1,13 @@
+# Resume HTML Page Starter Guide
+
 Designing a webpage layout for something like a resume is a rewarding first project. Here's a guide to help get started:
 
-### Understanding HTML and CSS
+## Understanding HTML and CSS
 
 1. **HTML (HyperText Markup Language)**: It's the backbone of any web page; it defines the structure and content. Think of it as the skeleton of your webpage defining the content.
 2. **CSS (Cascading Style Sheets)**: This defines the appearance of the HTML content. It's like the layout and paint of your webpage, making it visually appealing.
 
-### Basic HTML Structure
+## Basic HTML Structure
 
 A typical HTML document structure for a resume might look like this:
 
@@ -47,7 +49,7 @@ A typical HTML document structure for a resume might look like this:
 </html>
 ```
 
-### Applying CSS
+## Applying CSS
 
 To style your resume, you'll write rules in a separate `style.css` file. Here's a brief introduction to some CSS concepts you'll use:
 
@@ -85,14 +87,14 @@ footer {
 }
 ```
 
-### Tips for Effective Resume Layout Design
+> [!TIP] Tips for Effective Resume Layout Design
+>
+> - **Simplicity is Key**: Keep your design simple and professional. Avoid overusing colors and fonts.
+> - **Hierarchy**: Use headings (h1, h2, etc.) to define a clear hierarchy. Your name could be an `h1` (the most important), while section titles could be `h2`s, and so on.
+> - **Consistency**: Make sure your design is consistent throughout. Use the same font styles, colors, and sizes for similar elements.
+> - **Responsiveness**: Consider how your resume will look on different devices. You might not delve into this immediately, but it's something to keep in mind as you learn more about CSS, specifically media queries.
 
-- **Simplicity is Key**: Keep your design simple and professional. Avoid overusing colors and fonts.
-- **Hierarchy**: Use headings (h1, h2, etc.) to define a clear hierarchy. Your name could be an `h1` (the most important), while section titles could be `h2`s, and so on.
-- **Consistency**: Make sure your design is consistent throughout. Use the same font styles, colors, and sizes for similar elements.
-- **Responsiveness**: Consider how your resume will look on different devices. You might not delve into this immediately, but it's something to keep in mind as you learn more about CSS, specifically media queries.
-
-### Learning Resources
+## Learning Resources
 
 - **W3Schools (HTML and CSS sections)**: Great for beginners with plenty of examples.
 - **Mozilla Developer Network (MDN)**: Offers more in-depth explanations and is a great resource as you become more comfortable with the basics.
