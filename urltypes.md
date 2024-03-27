@@ -2,15 +2,21 @@
 
 URLs (Uniform Resource Locators) are used to specify addresses on the Internet. They can vary in form, indicating different types of paths or even no path at all. Understanding the differences between having no path, a relative path, and a full absolute path is crucial for web development and navigation.
 
+![URL Parts](images/urlparts.png)
+
+## No Filename
+
+If there is no filename the web server will provide what it defines as the default document to show, which usually is a file named `index.html` or `default.htm`. If these are also not found it will provide a 404/not found error. A filename can be added to any path below, or if absent, the default filename will be opened as defined by the web server providing the content.
+
 ## No Path
 
-A URL with no path simply points to the root of a website. It typically consists of a scheme (like `http`, `https`), followed by a colon, two forward slashes, and then the domain name. For example:
+A URL with no path points to the root of a website.
 
 ```
 https://www.example.com
 ```
 
-In this case, the URL directs the browser to the main entry point of the website, usually the home page. There's no specific path or resource specified after the domain name. When this is used the web server decides what document to show, which usually is a file named `index.html` or `default.htm`. 
+In this case, the URL directs the browser to the main entry point of the website, usually the home page. 
 
 ## Relative Path
 
