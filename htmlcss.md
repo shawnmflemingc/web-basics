@@ -16,6 +16,9 @@ HTML uses **tags** to mark up the content, telling the web browser how to displa
 - **`<a href="URL">`**: Creates a hyperlink to another HTML page or document to download.
 - **`<img src="imageURL" alt="text">`**: Embeds an image.
 
+> [!NOTE]
+> Best practice for HTML tags are to always use lowercase given they are not case sensitive.
+
 ## CSS Basics
 
 CSS is used to style the HTML content. It can be included in three ways: inline, internal, or external. Most professional websites use external CSS files to keep content and design separate.
@@ -43,7 +46,48 @@ h1 {
 
 This CSS will set the background color of the entire page to light blue and give all `<h1>` elements a navy color with a margin on the left.
 
+> [!WARNING]
+> CSS is generally Case Sensitive!
+
 ## Combining HTML and CSS
+
+There are three ways to combine HTML and CSS together. 
+
+1. Internal CSS
+2. External CSS
+3. Inline CSS
+
+> [!TIP]
+> It is a best practice to keep all your CSS contained together using either External or Internal (but not both together) and to avoid Inline CSS. 
+
+### Add a STYLE section for Internal CSS
+
+In your HTML document's `<head>` section, add a `<style>` section to contain the CSS selectors and declarations for that page. 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<!--below is the start of the CSS internal section-->
+<style>
+# This section uses CSS syntax only, no HTML!
+body {
+  background-color: linen;
+}
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+<!--Above is the end of the style section and now the document returns to HTML-->
+</head>
+<body>
+<h1>My document is here.</h1>
+</body>
+</html>
+```
+
+### Link to external CSS
 
 To link an external CSS file to an HTML document, you use the `<link>` tag inside the `<head>` section of your HTML file:
 
@@ -53,6 +97,6 @@ To link an external CSS file to an HTML document, you use the `<link>` tag insid
 </head>
 ```
 
-This link tells the browser to fetch and apply the styles from `styles.css` to the HTML document.
+This link tells the browser to fetch and apply the styles from `styles.css` to the HTML document. Never include the `<style>` HTML tag in this external document. 
 
-By mastering HTML and CSS, you'll be able to create and style a wide range of web pages. Experimentation and practice are key, so try creating simple pages and gradually incorporate more complex structures and styles using the https://w3schools.com/html and https://w3schools.css websites.
+Experimentation and practice are key to learning HTML and CSS, so try creating simple pages and gradually incorporate more complex structures and styles using the https://w3schools.com/html and https://w3schools.css websites.
