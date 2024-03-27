@@ -73,7 +73,8 @@ telnet localhost 8000
 Here, `localhost` is the hostname for your local machine, and `8000` is the port where your server is running.
 
 ### Type your HTTP GET Request
-Note: When you type you will NOT see those characters on screen in Telnet, but they are being sent to the web server. You also cannot use backspace to fix errors, so if you mistype start this step over!
+> [!IMPORTANT]
+> When you type you will NOT see those characters echoed back on your screen (because they're sent to the web server). You also cannot use backspace to fix errors, so if you mistype just press ENTER and start this step over.
 
 After the connection is established, type your HTTP request. To request the homepage (or the directory listing if no index.html is present), type:
 ```
@@ -81,6 +82,9 @@ GET / HTTP/1.1
 Host: localhost
 ```
 Then, press Enter twice to finish the request.
+
+> [!WARNING]
+> This is case sensitive and must be typed exactly right, and backspace does not work to correct mistakes.
 
 ### Observe the Response
 You should see the HTTP response from your local server, including the status code, headers, and the content of the requested file or directory listing. You should also see the GET request on the python window. 
