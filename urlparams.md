@@ -33,7 +33,7 @@ Remember the parts of a URL including the special characters that need to be the
  - `&` adds another key/value pair parameter
  - `#` denotes an anchor to jump to on the page
 
-![URL Example](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL/mdn-url-all.png)
+![URL Parts](images/urlparts.png)
 
 These characters MUST not be modified and the HTTP protocol uses them to understand what to do, and what to pass on to the web page. The next part (URL Encoding) is all about protecting these special characters. For example, what if you want to use google to search on a term using one of these characters, or even all of them! 
 In google, search for `:/?=& #` and see what it does in the URL. It replaces these characters with `%3A%2F%3F%3D%26+%23` to avoid confusing the URL. Basically it "encodes" each individual character as a 2-character Hexadecimal number (16-base counting) with a percent % before letting whatever needs it that the characters are encoded that way. 
